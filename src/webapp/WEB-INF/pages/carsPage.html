@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+
+<body>
+<p>Cars</p>
+<table border="2">
+
+    </thead>
+    <tr>
+
+        <th>Cars</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car, iterstat : ${cars}">
+
+        <td th:text="${car.getProducer()}"/>
+        <td th:text="${car.getModel()}"/>
+        <td th:text="${car.getYear()}"/>
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
