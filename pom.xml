@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.javamentor</groupId>
-    <artifactId>spring-mvc</artifactId>
+    <groupId>ru.alextinyakov</groupId>
+    <artifactId>spring-mvc-hibernate-crud</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
@@ -16,11 +16,55 @@
 
     <dependencies>
 
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.4.0-b180830.0359</version>
+        </dependency>
+
+        <!-->
+        Подключение Hibernate
+        </!-->
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.6.3.Final</version>
+        </dependency>
+
+        <!-->
+Подключение коннектора Mysql для работы с базой.
+</!-->
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-->
+               Java Servlet API — стандартизированный API,
+               предназначенный для реализации на сервере и работе с клиентом по схеме запрос-ответ.
+               </!-->
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -29,12 +73,25 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.2.3.RELEASE</version>
+        </dependency>
 
+        <!-->
+        Thymeleaf это библиотека, которая позволяет хранить html шаблоны на стороне сервера
+        и выдавать их по вызову определенного кода. Имеет функционал для управления контентом этого файла.
+        </!-->
         <dependency>
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf-spring5</artifactId>
             <version>3.0.14.RELEASE</version>
         </dependency>
+
+
+
+
 
     </dependencies>
 
