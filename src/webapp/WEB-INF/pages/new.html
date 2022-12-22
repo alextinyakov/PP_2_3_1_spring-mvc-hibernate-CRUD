@@ -17,7 +17,6 @@
         <p>
             <label th:for="lastName">Enter lastname</label>
             <input type="text" name="lastName" th:id="lastName" th:value="${user.getLastName()}"><br/>
-
         </p>
         <p>
             <label th:for="email">Enter email</label>
@@ -25,18 +24,19 @@
         </p>
 
     </fieldset>
-    <button type="submit">save</button>
+
+    <td>
+        <input type="submit" value="Save"/>
+    </td>
+
 </form>
 
-<form th:action="@{/successCreatedUser}">
-
-</form>
+<form th:action="@{/successCreatedUser}"></form>
 
 
 <form th:action="@{/users}">
-    <button type="submit">back</button>
+    <input type="submit" value="Back"/>
 </form>
-
 
 </body>
 </html>

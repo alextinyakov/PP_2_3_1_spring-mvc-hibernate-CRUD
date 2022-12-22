@@ -22,7 +22,6 @@ public class UserController {
 
     @GetMapping(value = "/")
     public String redirect() {
-
         return "redirect:/users";
     }
 
@@ -58,11 +57,6 @@ public class UserController {
 
     }
 
-//    @GetMapping("/users/{id}/delete")
-//    public String deleteUserById(@PathVariable("id") Long id) {
-//        userService.delete(id);
-//        return "redirect:/users";
-//    }
 
 
     @GetMapping(value = "/deleteUser/{id}")
@@ -71,12 +65,6 @@ public class UserController {
         return "redirect:/users";
     }
 
-
-//    @GetMapping("/users/{id}")
-//    public String show(@PathVariable("id") Long id, ModelMap modelMap) {
-//        modelMap.addAttribute("user", userService.showById(id));
-//        return "showById";
-//    }
 
 }
 
